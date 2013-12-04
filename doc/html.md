@@ -1,0 +1,1 @@
+#Please use Jade for all HTML Templates

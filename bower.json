@@ -1,0 +1,31 @@
+{
+  "name": "Sample Site",
+  "version": "1.0.0",
+  "homepage": "http://localhost",
+  "authors": [
+    "Chris Alvares <mail@chrisalvares.com>"
+  ],
+  "description": "",
+  "main": "./javascript/main.js",
+  "license": "MIT",
+  "private": true,
+  "directory" : "public/components",
+  "dependencies": {
+      "jquery":"latest",
+      "jquery-ui":"latest",
+      "requirejs":"latest",
+      "requirejs-text":"latest",
+      "requirejs-plugins":"latest",
+      "bootstrap":"~3.0",
+      "underscore":"latest",
+      "highcharts.com":"git@github.com:highslide-software/highcharts.com.git",
+      "d3":"latest"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

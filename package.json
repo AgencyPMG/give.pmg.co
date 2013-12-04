@@ -1,0 +1,16 @@
+{
+  "name": "Fitness",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "~3",
+    "jade": "*",
+    "jquery":"latest",
+    "underscore":"latest",
+    "mongodb":"latest",
+    "mongoose":"latest"
+  }
+}
