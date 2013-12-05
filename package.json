@@ -11,6 +11,8 @@
     "jquery":"latest",
     "underscore":"latest",
     "mongodb":"latest",
-    "mongoose":"latest"
+    "mongoose":"latest",
+    "passport":"latest",
+    "passport-fitbit":"latest"
   }
 }

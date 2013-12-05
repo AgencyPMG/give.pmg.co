@@ -6,8 +6,8 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-
 var app = express();
+var passport = require('passport');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -18,10 +18,20 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('your secret here'));
+app.use(express.cookieParser('pmgisawesome'));
 app.use(express.session());
-app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(app.router);
+
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
+});
 
 // development only
 if ('development' == app.get('env')) {

@@ -1,8 +1,38 @@
 extends layout
 
+block styles
+    link(rel="stylesheet", href="stylesheets/login.css")
+
 block scripts
-    script(type='text/javascript', data-main='scripts/main', src='components/requirejs/require.js')
+    script(type='text/javascript', data-main='scripts/main', src='components/requirejs/require.js') 
+    
 block content
-    .row
-        .col-md-12.
-            Here is some content
+    .jumbotron
+        h1 A time for goals and giving.
+    
+    .login-register-buttons
+        button(type="button").btn.btn-default.btn-lg Login
+        button(type="button").btn.btn-default.btn-lg Register
+        
+        
+    .modal.login-dialog
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4.modal-title Login
+                .modal-body
+                    p Login stuff goes here
+                .modal-footer
+                    button(type="button",data-dismiss="modal").btn.btn-default Close
+                    button(type="button").btn.btn-primary Login
+                    
+    .modal.register-dialog
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4.modal-title Login
+                .modal-body
+                    p Register Dialog goes here
+                .modal-footer
+                    button(type="button",data-dismiss="modal").btn.btn-default Close
+                    button(type="button").btn.btn-primary Login

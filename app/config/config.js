@@ -1,5 +1,6 @@
 module.exports = {
-    appname:"App Name",
+    appname:"give.pmg.co",
+    domain:"give.pmg.co",
     admin: {
         email:"chris.alvares@pmg.co",
     },
@@ -8,5 +9,9 @@ module.exports = {
         port:'27017',
         dbname:'fitness',
     },
-    debug: false
+    debug: false,
+    fitbit: {
+        key:'',
+        secret:''
+    }
 }
