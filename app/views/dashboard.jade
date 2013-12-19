@@ -10,8 +10,22 @@ block content
     .container.dashcontainer
         .row-fluid
             .col-md-12
-                h1 Your Activity
+                h1.clearfix
+                    .teamtitle.pull-left
+                        span.username [#{user.clientName.toUpperCase()}] #{user.firstName} #{user.lastName}
+                        's Activity
+                    .score.pull-right
         .row-fluid
             .col-md-12
                 .activityGraph
+        .row-fluid
+            .col-md-6 
+                h1 Team Scoreboard
+            .col-md-6
+                h1 Top Individuals
+        .row-fluid
+            .col-md-6
+                .teamScoreboard
+            .col-md-6
+                .individualScoreboard
                 
