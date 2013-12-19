@@ -1,11 +1,9 @@
 var passport = require('passport');
 var User = require('../models/user');
-
+var $ = require('jquery');
 module.exports = {
     
     login:function(req, res) {
-        console.log("got here");
-        console.log(req.user);
         res.redirect(302, '/dashboard');      
     }
     
@@ -23,7 +21,26 @@ module.exports = {
         });
     }
     
+    , updateUser:function(req, res) {
+        var params = {
+            firstName:req.param('first-name'),
+            lastName:req.param('last-name'),
+            charity:req.param('charity'),
+            clientName:req.param('client-name')
+        };
+        
+        User.update({id:req.user.id}, params, {upsert:false}, function(error) {
+            if(error) {
+                console.log(error);
+                res.redirect('/user/edit?error=' + encodeURIComponent(error));
+                return;
+            }
+            req.user = $.extend(req.user, params);
+            res.redirect('/dashboard/');
+        });
+    }
+    
     , editUserDialog:function(req, res) {
-        res.send("/usr/");
+        res.render('user_edit', {user:req.user});
     }
 }

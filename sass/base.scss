@@ -1,18 +1,112 @@
+$borderColor:rgba(194,194,194,.3);
+
 html, body
 {
     background:url("/images/background.png") repeat #f6f6f6;
+    color:#a1a1a1;
+    font-weight: 300;
 }
 
 header
 {
     position: fixed;
-    background-color:white;
-    background-color: rgba(255, 255, 255, .8);
+    background-color:#a5ce3a;
+    background-color: rgba(165, 206, 58, .5);
     width:100%;
     padding:10px;
     border-bottom: 1px solid #717171;
     .logo img
     {
-        height:40px;
+/*         height:40px; */
     }
 }
+
+form .form-control {
+    border-radius: 1px;
+}
+
+.fit-modal
+{
+    width:400px;
+    margin: 10% auto;
+    background-color:white;
+    padding:40px;
+    border:1px solid $borderColor;
+    .header {
+        font-size: 17px;
+        padding-bottom:30px;
+        border-bottom: 2px solid $borderColor;
+    }
+    .body {
+        padding:30px 0px;
+        border-bottom: 2px solid $borderColor;
+        font-size: 13px;
+        
+        table {
+            margin-top:10px;
+            td {
+                text-align: center;
+            }
+        }
+        .form
+        {
+            table {
+                width: 100%;
+                td {
+                    padding:5px;
+                }
+                tr > td:nth-child(1) {
+                    text-align: right;
+                    padding-right: 10px;
+                } 
+            } 
+        }
+
+
+    }
+    .footer {
+        padding-top:30px;
+        .btn {
+            width:100%;
+        }
+    }
+}
+
+.btn-success
+{
+    background-color:#a7ca4a;
+    font-weight: 500;
+    font-size: 12px;
+    border:none;
+}
+
+.sprite
+{
+    display: inline-block;
+    background-image: url("/images/sprite.png");
+}
+
+.sprite-calories
+{
+    background-position: 0 0;
+    width: 18px;
+    height: 30px;
+}
+.sprite-sleep {
+    background-position: -105px 0;
+    width: 37px;
+    height: 22px;
+}
+
+.sprite-steps {
+    background-position: -70px 0;
+    width: 35px;
+    height: 42px;
+}
+
+.sprite-social {
+    background-position: -35px 0;
+    width: 28px;
+    height: 23px;
+}
+

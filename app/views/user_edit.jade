@@ -1,0 +1,37 @@
+extends layout
+    
+block content
+    form(method="POST",action="/user/edit/save")
+        .fit-modal
+            .header.
+                User Edit
+            .body
+                .section-top.
+                    Please fill out your charity of choice and assign what company you belong to. You will be competing with other teams, so make sure you get your teammates to keep exercising.
+                .section-bottom.form
+                    table
+                        tr
+                            td First Name:
+                            td 
+                                input(type="text",name="first-name",value=user.firstName,placeholder="First Name").form-control
+                        tr
+                            td Last Name:
+                            td 
+                                input(type="text",name="last-name",value=user.lastName,placeholder="Last Name").form-control
+                        tr
+                            td Charity of Choice:
+                            td 
+                                input(type="text",name="charity",placeholder="Charity Name",value=user.charity).form-control
+                        tr
+                            td Client Name:
+                            td
+                                select.form-control(name="client-name")
+                                    option(value="pmg",selected= user.clientName == "pmg") PMG
+                                    option(value="jcrew",selected= user.clientName == "jcrew") J.Crew
+                                    option(value="travelocity",selected= user.clientName == "travelocity") Travelocity
+                                    option(value="motel6",selected= user.clientName == "motel6") Motel 6
+                                    option(value="hurley",selected= user.clientName == "hurley") Hurley
+                                    option(value="stage",selected= user.clientName == "stage") Stage
+            .footer
+                input(type="submit").btn.btn-success(value="Save")
+                

@@ -13,6 +13,8 @@
     "mongodb":"latest",
     "mongoose":"latest",
     "passport":"latest",
-    "passport-fitbit":"latest"
+    "passport-fitbit":"latest",
+    "oauth":"latest",
+    "commander":"latest"
   }
 }

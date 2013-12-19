@@ -20,8 +20,11 @@ module.exports = function(app)
     app.get('/', mainRoute.index);
     app.get('/login', passport.authenticate('fitbit'), login.login);
     app.get('/auth/fitbit/callback', passport.authenticate('fitbit', {failureRedirect: '/login'}), login.login);
-    app.get('/dashboard', ensureAuthenticated, dashboard.home);
     app.get('/user/edit', ensureAuthenticated, login.editUserDialog);
+    app.post('/user/edit/save', ensureAuthenticated, login.updateUser);
+
+    app.get('/dashboard', ensureAuthenticated, dashboard.home);
+    app.get('/dashboard/data', ensureAuthenticated, dashboard.data);
     
 }
 
