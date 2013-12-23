@@ -1,9 +1,9 @@
 
-var $ = require('jquery');
+var _ = require('underscore');
 
 var UserStrategy = function(userDictionary)
 {
-    this.dict = $.extend(true, {}, this.defaultDictionary, userDictionary);
+    this.dict = _.extend({}, this.defaultDictionary, userDictionary);
 }
 
 UserStrategy.prototype.calculateScore = function()

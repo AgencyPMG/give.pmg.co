@@ -15,6 +15,7 @@
     "passport":"latest",
     "passport-fitbit":"latest",
     "oauth":"latest",
-    "commander":"latest"
+    "commander":"latest",
+    "moment":"latest"
   }
 }

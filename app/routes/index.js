@@ -25,6 +25,7 @@ module.exports = function(app)
 
     app.get('/dashboard', ensureAuthenticated, dashboard.home);
     app.get('/dashboard/data', ensureAuthenticated, dashboard.data);
+    app.post('/auth/fitbit/subscription', require('../controllers/fitbit')(app).fetch); 
     
 }
 
