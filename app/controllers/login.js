@@ -36,6 +36,7 @@ module.exports = {
                 return;
             }
             req.user = $.extend(req.user, params);
+            try { req.session.passport.user = req.user} catch(e){console.log(e)};
             res.redirect('/dashboard/');
         });
     }
