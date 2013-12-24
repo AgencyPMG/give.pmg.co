@@ -108,7 +108,7 @@ ScoreboardCommand.prototype.updateTeamScores = function(scores, done)
     console.log(scores);
     for(var name in scores) {
         var totalScore = 0;
-        for(var i=0;i<scores[name].length;i++) {
+        for(var r=0;r<scores[name].length;r++) {
             totalScore += scores[name][i];
         }
         totalScore = totalScore / scores[name].length;
